@@ -3,25 +3,16 @@
     <head>
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>Nettside mal</title>
+         <title>Registrering</title>
     </head>
     <body>
         <header>
-            <h1>Hovedoverskrift</h1>
+            <h1>Registrering</h1>
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html">Hjem</a>
+                        <a href="registreringsskjema.html">Hjem</a>
                      </li>
-                     <li>
-                        <a href="Validering.html">Valideringsoppgave</a>
-                     </li>
-                     <li>
-                        <a href="nettsidemal.html">Nettside-mal</a>
-                     </li>
-                     <li>
-                        <a href="kontakt.html">Kontakt oss</a>
-                    </li>
                 </ul>
             </nav>
          </header>
@@ -30,44 +21,59 @@
                 <h2>Registrer deg</h2>
                 <form>
                     <label>
-                        Navn
+                        Navn:
                         <input type="text" pattern="[A-Za-zæøåÆØÅ]{2,}" required>
                     </label>
                     <label>
-                        E-post
+                        E-post:
                         <input type="email" required>
                     </label>
                     <label>
-                        Passord
+                        Passord:
                         <input type="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                     </label>
                     <label>
-                        Alder
+                        Alder:
                         <input type="number" min="18" max="99" required>
                     </label>
                     <label>
-                        Telefonnummer
+                        Telefonnummer:
                         <input type="number" pattern="[0-9]{8,12}" required>
                     </label>
                     <label>
-                        Fødselsdato
+                        Fødselsdato:
                         <input type="date" max="2023-12-31" required>
                     </label>
                     <label>
+                        Velg kjønn:
+                    </label>
+                    <label>
                         Mann
-                        <input type="radio" required>
+                        <input type="radio" name="valg" required>
                     </label>
                     <label>
                         Kvinne
-                        <input type="radio" required>
+                        <input type="radio" name="valg" required>
                     </label>
                     <label>
                         Annet
-                        <input type="radio" required>                    
+                        <input type="radio" name="valg" required>                    
                     </label>
-                    <lable>
-                        <input type="select" required>
-                    </lable>
+                    <label>
+                        Land:
+                        <select name="land">
+                            <option value="Norge">Norge</option>
+                            <option value="Sverige">Sverige</option>
+                            <option value="Danmark">Danmark</option>
+                        </select>
+                    </label>
+                    <label>
+                        Personvern:
+                        <input type="checkbox" required>
+                    </label>
+                </label>
+                <input type="submit" value="Send melding">
+                <lable>
                 </form> 
             </section>
          </main>
